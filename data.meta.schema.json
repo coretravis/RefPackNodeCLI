@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RefPack DatasetMeta",
+  "type": "object",
+  "required": ["id", "version", "title", "createdUtc"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9_-]*[A-Za-z0-9])?$",
+      "description": "Package identifier (alphanumeric, -, _, no spaces)."
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z\\.]+)?$",
+      "description": "SemVer 2.0.0 version string."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable title."
+    },
+    "description": {
+      "type": "string",
+      "description": "Optional long description."
+    },
+    "authors": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of author names or organizations."
+    },
+    "createdUtc": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC timestamp of package creation."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Free-form tags."
+    },
+    "license": {
+      "type": "string",
+      "description": "SPDX license identifier."
+    },
+    "nameField": {
+      "type": "string",
+      "default": "name",
+      "description": "Field used for human-readable names."
+    },
+    "idField": {
+      "type": "string",
+      "default": "id",
+      "description": "Field used for unique identifiers."
+    }
+  },
+  "additionalProperties": false
+}

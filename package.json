@@ -1,0 +1,21 @@
+{
+  "name": "refpack-cli",
+  "version": "1.0.0",
+  "description": "CLI for RefPack dataset packaging and registry operations.",
+  "main": "refpack.js",
+  "bin": {
+    "refpack": "./refpack.js"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node refpack.js"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "ajv": "^8.0.0",
+    "ajv-formats": "^2.0.0",
+    "commander": "^11.0.0",
+    "jose": "^5.0.0",
+    "node-fetch": "^3.0.0"
+  }
+}
