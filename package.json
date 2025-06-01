@@ -1,5 +1,5 @@
 {
-  "name": "refpack-cli",
+  "name": "@coretravis/refpack-cli",
   "version": "1.0.0",
   "description": "CLI for RefPack dataset packaging and registry operations.",
   "main": "refpack.js",
